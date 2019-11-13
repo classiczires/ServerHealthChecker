@@ -1,5 +1,7 @@
 package com.zires.serverhealthchecker.servers
 
+import com.zires.lib.EmailNotification
+import com.zires.lib.SmsNotification
 import com.zires.serverhealthchecker.Server
 
 /**
@@ -8,6 +10,9 @@ import com.zires.serverhealthchecker.Server
 
 class WebServer : Server {
     override fun checkHealthAndNotify() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val resultCheckHealth = "The system is healthy"
+
+        EmailNotification().notify(resultCheckHealth)
+        SmsNotification().notify(resultCheckHealth)
     }
 }
