@@ -1,2 +1,2 @@
-include ':app', ':lib'
+include ':app', ':notification'
 rootProject.name='ServerHealthChecker'
